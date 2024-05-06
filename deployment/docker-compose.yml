@@ -17,6 +17,8 @@ services:
     env_file:
       - .env
     environment:
+      # If using with a domain, modify -NEXT_AUTH_URL=http://yourdomain.com
+      - NEXT_AUTH_URL=http://localhost:28669
       - INFERENCE_SERVER=http://inference:11434/
       - VECTOR_DB_SERVER=http://vector-db:8000
       - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
